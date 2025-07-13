@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Investment Advisor - Multi-Agent System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Expert Personalities</h3>
+            <ul id="personality-list">
+                <li class="personality-item active" data-personality="Warren Buffett">Warren Buffett</li>
+                <li class="personality-item" data-personality="Peter Lynch">Peter Lynch</li>
+                <li class="personality-item" data-personality="Benjamin Graham">Benjamin Graham</li>
+                <li class="personality-item" data-personality="George Soros">George Soros</li>
+                <li class="personality-item" data-personality="Cathie Wood">Cathie Wood</li>
+                <li class="personality-item" data-personality="Charlie Munger">Charlie Munger</li>
+                <li class="personality-item" data-personality="Michael Burry">Michael Burry</li>
+                <li class="personality-item" data-personality="Phil Fisher">Phil Fisher</li>
+                <li class="personality-item" data-personality="Rakesh Jhunjhunwala">Rakesh Jhunjhunwala</li>
+                <li class="personality-item" data-personality="Stanley Druckenmiller">Stanley Druckenmiller</li>
+                <li class="personality-item" data-personality="Bill Ackman">Bill Ackman</li>
+                <li class="personality-item" data-personality="Aswath Damodaran">Aswath Damodaran</li>
+            </ul>
+            
+            <div class="current-personality">
+                <h4>Current Advisor:</h4>
+                <p id="current-personality-name">Warren Buffett</p>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>AI Investment Advisor</h2>
+                <p>Get personalized investment advice from legendary investors</p>
+            </div>
+            
+            <div id="chat-box"></div>
+            
+            <div class="chat-input-container">
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Ask about stock quotes, news, or investment advice...">
+                    <button id="send-button">Send</button>
+                </div>
+                <div class="example-queries">
+                    <small>Try: "Apple stock price", "Tesla news last week", "Should I buy Microsoft?", "PayPal quote", "Amazon news"</small>
+                    <br>
+                    <small style="color: #6c757d; font-style: italic;">💡 Tip: Use ↑/↓ arrow keys to navigate through your recent queries</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
